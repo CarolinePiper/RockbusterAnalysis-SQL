@@ -1,0 +1,41 @@
+# SQL query to find the top movie genres in each country
+
+SELECT D.name AS genre, H.country,
+COUNT (A.rental_id) AS rental_count
+FROM rental A
+  JOIN inventory B ON A.inventory_id = B.inventory_id
+  JOIN film_category C ON B.film_id = C.film_id
+  JOIN category D ON C.category_id = D.category_id
+  JOIN customer E ON A.customer_id = E.customer_id
+  JOIN address F on E.address_id = F.address_id
+  JOIN city G on F.city_id = G.city_id
+  JOIN country H on G.country_id = H. country_ID
+GROUP BY D.name, H.country
+ORDER BY COUNT(A.rental_id) DESC
+LIMIT  35
+
+
+# SQL query to find the average rental rate and average rental duration in each country
+
+SELECT A.country, AVG(G.rental_rate) AS avg_rental_rate, AVG(G.rental_duration) AS avg_rental_duration
+FROM country A
+  INNER JOIN city B on A.country_id = B.country_ID
+  INNER JOIN address C on B.city_id = C.city_id
+  INNER JOIN customer D on C.address_id = D.address_id
+  INNER JOIN rental E on D.customer_id = E.customer_id
+  INNER JOIN inventory F on E.inventory_id = F.inventory_id
+  INNER JOIN film G on F.film_id = G.film_id
+GROUP BY A.country
+ORDER BY A.country ASC; 
+
+
+# SQL query to find which countries have the top revenue
+
+SELECT country, COUNT(DISTINCT A.customer_id) AS customer_count, 	SUM(amount) AS total_payment 
+FROM customer A 
+	JOIN address B ON A.address_id = B.address_id 
+	JOIN city C ON B.city_id = C.city_id 
+	JOIN country D ON C.country_ID = D.country_ID 
+	JOIN payment E ON a.customer_id = E.customer_id 
+GROUP BY country
+ORDER BY total_payment DESC
