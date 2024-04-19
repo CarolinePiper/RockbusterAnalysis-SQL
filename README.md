@@ -17,10 +17,15 @@ ad-hoc business questions that other departments may have.
 
 ## Key Questions
 ● Which movies contributed the most/least to revenue gain?
+
 ● What was the average rental duration for all videos?
+
 ● Which countries are Rockbuster customers based in?
+
 ● Where are customers with a high lifetime value based?
+
 ● Do sales figures vary between geographic regions?
+
 
 ## Data & Tools
 The data for this project was created and provided by Career Foundry. The data set includes information on customers, staff, store locations, movies in stock, actors, movie languages, and rentals.
@@ -29,5 +34,7 @@ Tools used were; Postgre SQL, Tableau, Excel, and Canva.
 
 ## Deliverables
 ● Presentation for business managers.
+
 ● Excel file for technical colleagues.
+
 ● Data Dictionary.
