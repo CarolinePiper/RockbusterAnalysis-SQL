@@ -33,8 +33,8 @@ The data for this project was created and provided by Career Foundry. The data s
 Tools used were; Postgre SQL, Tableau, Excel, and Canva.
 
 ## Deliverables
-● Presentation for business managers.
+● [Presentation for business managers](https://github.com/CarolinePiper/RockbusterAnalysis-SQL/blob/main/FINAL%20Rockbuster%20Stealth%20Final%20Project.pdf).
 
-● Excel file for technical colleagues.
+● [Excel file for technical colleagues](https://github.com/CarolinePiper/RockbusterAnalysis-SQL/blob/main/FINAL-3.10-Queries-EXCEL.xlsx).
 
-● Data Dictionary.
+● [Data Dictionary](https://github.com/CarolinePiper/RockbusterAnalysis-SQL/blob/main/3.10%20Data%20Dictionary%20(final).pdf).
